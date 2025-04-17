@@ -4,7 +4,7 @@
 	"description": "Trang tin điện tử NodeJS + MongoDB Atlas",
 	"main": "index.js",
 	"scripts": {
-		"test": "nodemon index.js"
+		"test": "node index.js"
 	},
 	"author": "Nguyễn Hoàng Tùng",
 	"license": "ISC",

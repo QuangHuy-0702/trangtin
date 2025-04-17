@@ -83,7 +83,9 @@ router.get('/baiviet/chitiet/:id', async (req, res) => {
     .populate('TaiKhoan').exec();
 
   // Xử lý tăng lượt xem bài viết
-
+await BaiViet.findByIdAndUpdate(id, {
+	LuotXem: bv.LuotXem + 1}
+);
   // Lấy 3 bài viết xem nhiều nhất hiển thị vào cột phải
   var xnn = await BaiViet.find({ KiemDuyet: 1 })
     .sort({ LuotXem: -1 })
